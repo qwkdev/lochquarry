@@ -173,7 +173,8 @@ img {
 }
 
 #content {
-	width: 100%;
+	width: calc(100% - (var(--column-gap)*2));
+	margin-left: var(--column-gap);
 	height: min-content;
 	display: grid;
 	grid-template-columns: repeat(var(--column-num), 1fr);
@@ -183,7 +184,7 @@ img {
 	.title {
 		max-width: 100%;
 		width: 100%;
-		margin: 4.5vh var(--column-gap);
+		margin: 4.5vh 0;
 		display: inline-block;
 		float: left;
 		h1 {
@@ -205,7 +206,7 @@ img {
 	
 	.activity {
 		width: 100%;
-		margin: 0 var(--column-gap);
+		margin: 0;
 		transition: 1s;
 		
 		img {
